@@ -4,7 +4,15 @@ namespace Roy688\Ssh;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
+    
     const CONFIG_PATH = __DIR__ . '/../config/ssh.php';
+
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    //protected $defer = true;
 
     public function boot()
     {
@@ -24,4 +32,25 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             return new Ssh();
         });
     }
+
+    /**
+     * Register class aliases.
+     *
+     * @return void
+     */
+    protected function registerAliases()
+    {
+      $this->app->alias('ssh', 'Roy688\Ssh\Ssh');
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['ssh'];
+    }
+
 }

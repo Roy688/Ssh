@@ -41,7 +41,10 @@
     "laravel": {
       "providers": [
         "Roy688\\Ssh\\ServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "Ssh": "Roy688\\Ssh\\Ssh"
+      }
     }
   },
   "config": {
