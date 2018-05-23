@@ -1,0 +1,52 @@
+{
+  "name": "roy688/ssh",
+  "description": "A packages to use ssh in Laravel.",
+  "license": "MIT",
+  "keywords": [
+    "ssh"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Roy Thia",
+      "email": "slaythia@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "~5.6.0",
+    "laravelcollective/remote": "^5.6"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.6.0",
+    "phpunit/phpunit": "~7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Roy688\\Ssh\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Roy688\\Ssh\\Tests\\": "tests"
+    },
+    "files": [
+      "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
+    ]
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Roy688\\Ssh\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
