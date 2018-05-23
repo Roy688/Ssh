@@ -31,6 +31,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->bind('ssh', function () {
             return new Ssh();
         });
+
+        $this->registerAliases();
     }
 
     /**
